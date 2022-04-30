@@ -1,0 +1,35 @@
+
+.v-row {
+    /* enter height of video here: */
+    min-height: 315px; 
+    margin-top: 10px;
+}
+
+.v-row__container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.v-row__card {
+    background: #ffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
+    text-align:center;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.v-row__video {
+    height: 315px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+.v-row__caption {
+    padding: 2rem;
+}
