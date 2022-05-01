@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="test.css" type="text/css">
     <script src="https://kit.fontawesome.com/1e0ac992a7.js" crossorigin="anonymous"></script>
 
-
-
 </head>
 <title></title>
   <body>
@@ -33,5 +31,61 @@
             </figure>
         </div>
     </div>
-  </body>
+
+    <div class="popup-video">
+        <span>&times;</span>
+        <iframe width="560" src="https://www.youtube.com/embed/P3izteVgpFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    
+    <script>
+        const cards = document.querySelectorAll('.v-row__card');
+        const popupScreen = document.querySelector('.popup-video')
+        const popupVid = popupScreen.querySelector('iframe');
+    
+        cards.forEach((card) => {
+            card.onclick = (e) => {
+                const clickedVid = card.querySelector('iframe')
+                popupScreen.style.display = 'block';
+                popupVid.src =clickedVid.src;
+            }
+        })
+
+        document.addEventListener('click', (e) => {
+    
+            if (e.target.className === "popup-video") {
+                const targetVid =   e.target.querySelector('iframe');
+                targetVid.src = targetVid.src;
+                popupScreen.style.display = 'none'
+
+            }
+            })
+    </script>
+  </body>  
 </html>
+
+
+<script defer>
+
+    console.log('test')
+
+    const vids = document.querySelectorAll('.v-row__card');
+
+    console.log(vids)
+    // document.querySelectorAll('.v-row__card').forEach(card => {
+    //     console.log(card)
+    //     })
+        // document.querySelector('.popup-video span').onclick = () => {
+        //    
+        // }
+
+        // document.addEventListener('click', (e) => {
+
+        //     if (e.target.className === "popup-video") {
+           
+        //         document.querySelector('.popup-video').style.display = 'none'
+        //     }
+        // })
+</script>
+
